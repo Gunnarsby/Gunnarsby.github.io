@@ -408,7 +408,7 @@ footer {
     <defs>
       <!-- Soccer ball clip so it looks round -->
       <clipPath id="ball-clip">
-        <circle cx="155" cy="78" r="29"/>
+        <circle cx="196" cy="78" r="29"/>
       </clipPath>
     </defs>
 
@@ -430,17 +430,12 @@ footer {
 
     <!-- ── NEW "3" that will rotate to become W ──
          transform-origin set to center of glyph bounding box ~(247, 78) -->
-    <text x="210" y="135"
-  font-family="Manrope, Arial Black, sans-serif"
-  font-weight="800" font-size="128"
-  fill="#2b5bff"
-  stroke="#2b5bff"
-  stroke-width="2"
-  stroke-linejoin="round"
-  stroke-linecap="round"
-  style="transform: scale(1.02,1.06); transform-origin: 247px 78px;">
-  3
-</text>
+    <g id="w-char" style="transform-origin: 247px 78px;">
+      <text x="210" y="135"
+        font-family="Manrope, Arial Black, sans-serif"
+        font-weight="800" font-size="128" fill="#2b5bff"
+        style="transform-origin: 247px 78px;">3</text>
+    </g>
 
     <!-- ── "eeks" slides in ── -->
     <g id="eeks-char">
@@ -452,9 +447,9 @@ footer {
     <!-- ── SOCCER BALL ──
          starts at translate(-260,-180) relative to cx=196,cy=78 → top-left of screen
          travels to translate(0,0) = its resting position beside "t" -->
-    <g id="ball" style="transform-origin: 155px 78px;">
+    <g id="ball" style="transform-origin: 196px 78px;">
       <!-- white circle -->
-      <circle cx="155" cy="78" r="29" fill="#ffffff" stroke="#2b5bff" stroke-width="3.5"/>
+      <circle cx="196" cy="78" r="29" fill="#ffffff" stroke="#2b5bff" stroke-width="3.5"/>
       <!-- soccer patches clipped -->
       <g clip-path="url(#ball-clip)">
         <!-- centre pentagon -->
