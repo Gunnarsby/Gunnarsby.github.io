@@ -145,6 +145,38 @@
     mix-blend-mode: multiply;
   }
 
+  .about-screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.product-gallery {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.product-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
   .hero-tag {
     font-family: var(--mono);
     font-size: 12px;
@@ -178,7 +210,7 @@
   }
 
   .hero-desc {
-    <div class="hero-desc fade-up fade-up-3" id="typing-container">
+<div class="hero-desc fade-up fade-up-3" id="typing-container">
   <span class="word">A</span>
   <span class="word">machine</span>
   <span class="word">learning</span>
@@ -732,109 +764,78 @@
     <div class="about-body reveal reveal-left">
       <p class="section-label">About the Project</p>
       <h2>What is 2 to 3 Weeks?</h2>
+
       <p>In professional football, "2 to 3 weeks" is the most common phrase uttered when a player gets injured — a vague prognosis that leaves coaches, clubs, and fans in the dark. We decided to take that phrase and turn it into a prediction engine.</p>
 
-<p>Our web application ingests player biometric data, workload metrics, historical injury records and match statistics to output a real-time injury risk score. The goal is to give performance staff the early warning they need to rotate squads, adjust training loads, and prevent career-altering injuries before they happen.</p>
+      <p>Our web application ingests player biometric data, workload metrics, historical injury records and match statistics to output a real-time injury risk score. The goal is to give performance staff the early warning they need to rotate squads, adjust training loads, and prevent career-altering injuries before they happen.</p>
 
-<p>Beyond professional use, the platform also supports fantasy football players. When building squads and selecting players each gameweek, users can factor in predicted injury risk to avoid short-term absences and maximise points potential. This adds a strategic layer, helping users make smarter, data-driven decisions.</p>
+      <p>Beyond professional use, the platform also supports fantasy football players. When building squads and selecting players each gameweek, users can factor in predicted injury risk to avoid short-term absences and maximise points potential.</p>
 
-<p>Built over four sprint cycles with a full-stack architecture, the system pairs a React frontend with a Python ML backend, trained on anonymised player datasets.</p>
+      <p>Built over four sprint cycles with a full-stack architecture, the system pairs a React frontend with a Python ML backend, trained on anonymised player datasets.</p>
 
       <ul class="feature-list">
         <li>
           <span class="feature-icon">⚡</span>
           <div>
             <div class="feature-title">Real-time Risk Scoring</div>
-            <div class="feature-desc">Predict injury probability per player based on recently played matches and training data streams.</div>
+            <div class="feature-desc">Predict injury probability per player based on recent matches and training data.</div>
           </div>
         </li>
         <li>
           <span class="feature-icon">🧠</span>
           <div>
             <div class="feature-title">ML-Powered Prediction</div>
-            <div class="feature-desc">Gradient-boosted model trained on 5,000+ player-seasons of professional match data.</div>
+            <div class="feature-desc">Model trained on 5,000+ player-seasons of data.</div>
           </div>
         </li>
         <li>
           <span class="feature-icon">📊</span>
           <div>
             <div class="feature-title">Coach Dashboard</div>
-            <div class="feature-desc">Intuitive visual interface showing squad risk levels, trends and actionable recommendations.</div>
+            <div class="feature-desc">Visual interface with actionable insights.</div>
           </div>
         </li>
       </ul>
     </div>
 
-    <div class="reveal reveal-right">
-      <div class="risk-card">
-        <div class="risk-header">
-          <span class="risk-title">Squad Risk Overview</span>
-          <span class="risk-badge">Live Demo</span>
-        </div>
-        <div class="player-row">
-          <div class="player-avatar">MR</div>
-          <div class="player-info">
-            <div class="player-name">M. Rodríguez</div>
-            <div class="player-pos">CB · #5</div>
-          </div>
-          <div class="risk-bar-wrap">
-            <div class="risk-pct" style="color:#d93025;">78%</div>
-            <div class="risk-bar-bg"><div class="risk-bar-fill" style="width:78%;background:#d93025;"></div></div>
-          </div>
-        </div>
-        <div class="player-row">
-          <div class="player-avatar">JA</div>
-          <div class="player-info">
-            <div class="player-name">J. Andersen</div>
-            <div class="player-pos">CM · #8</div>
-          </div>
-          <div class="risk-bar-wrap">
-            <div class="risk-pct" style="color:#b08000;">52%</div>
-            <div class="risk-bar-bg"><div class="risk-bar-fill" style="width:52%;background:#e6a800;"></div></div>
-          </div>
-        </div>
-        <div class="player-row">
-          <div class="player-avatar">LB</div>
-          <div class="player-info">
-            <div class="player-name">L. Becker</div>
-            <div class="player-pos">ST · #9</div>
-          </div>
-          <div class="risk-bar-wrap">
-            <div class="risk-pct" style="color:var(--accent);">24%</div>
-            <div class="risk-bar-bg"><div class="risk-bar-fill" style="width:24%;background:var(--accent);"></div></div>
-          </div>
-        </div>
-        <div class="player-row">
-          <div class="player-avatar">KN</div>
-          <div class="player-info">
-            <div class="player-name">K. Nkosi</div>
-            <div class="player-pos">LB · #3</div>
-          </div>
-          <div class="risk-bar-wrap">
-            <div class="risk-pct" style="color:var(--accent);">18%</div>
-            <div class="risk-bar-bg"><div class="risk-bar-fill" style="width:18%;background:var(--accent);"></div></div>
-          </div>
-        </div>
-        <div class="player-row">
-          <div class="player-avatar">TS</div>
-          <div class="player-info">
-            <div class="player-name">T. Svensson</div>
-            <div class="player-pos">GK · #1</div>
-          </div>
-          <div class="risk-bar-wrap">
-            <div class="risk-pct" style="color:var(--accent);">9%</div>
-            <div class="risk-bar-bg"><div class="risk-bar-fill" style="width:9%;background:var(--accent);"></div></div>
-          </div>
-        </div>
-        <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border); display:flex; gap:1.5rem; font-size:11px; font-family:var(--mono); color:var(--muted);">
-          <span style="display:flex;align-items:center;gap:0.4rem;"><span style="width:8px;height:8px;border-radius:50%;background:#d93025;display:inline-block;"></span>High Risk</span>
-          <span style="display:flex;align-items:center;gap:0.4rem;"><span style="width:8px;height:8px;border-radius:50%;background:#e6a800;display:inline-block;"></span>Moderate</span>
-          <span style="display:flex;align-items:center;gap:0.4rem;"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span>Low Risk</span>
-        </div>
-      </div>
+    <!-- 🔥 REPLACED DEMO WITH SCREENSHOTS -->
+    <div class="about-screenshots reveal reveal-right">
+      <img src="images/player.png" alt="Dashboard Screenshot" class="screenshot">
+      <img src="images/dasboard.png" alt="Player Risk View" class="screenshot">
     </div>
   </div>
 </section>
+
+
+<!-- 🚀 NEW PRODUCT SECTION -->
+<section id="product">
+  <div class="container reveal">
+    <p class="section-label">Try the Product</p>
+    <h2>Experience "2 to 3 Weeks"</h2>
+
+    <p>
+      The best way to understand the platform is to try it yourself. Explore real player data,
+      view injury risk predictions, and interact with the dashboard in real time.
+    </p>
+
+    <div class="product-actions">
+      <a href="https://sports-injury-indicator-alpha.vercel.app/my-players" target="_blank" class="btn-primary">
+        Launch Live Demo
+      </a>
+      <a href="https://your-github-link.com" target="_blank" class="btn-secondary">
+        View Source Code
+      </a>
+    </div>
+
+    <!-- 📸 SCREENSHOT SHOWCASE -->
+    <div class="product-gallery">
+      <img src="images/demo1.png" alt="App Screenshot 1">
+      <img src="images/demo2.png" alt="App Screenshot 2">
+      <img src="images/demo3.png" alt="App Screenshot 3">
+    </div>
+  </div>
+</section>
+
 
 <section id="sprints">
 
