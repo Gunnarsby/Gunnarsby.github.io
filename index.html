@@ -462,6 +462,40 @@
     transition: background 0.2s;
   }
 
+.btn-primary {
+  padding: 0.8rem 1.4rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* 🔥 NEW SECONDARY BUTTON */
+.btn-secondary {
+  padding: 0.8rem 1.4rem;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}    
+
   .sprint-card:hover { border-color: var(--border2); background: var(--surface2); }
   .sprint-card:hover::after { background: var(--accent); }
 
@@ -819,7 +853,7 @@
     </p>
 
     <div class="product-actions">
-      <a href="https://sports-injury-indicator-alpha.vercel.app/my-players" target="_blank" class="btn-primary">
+      <a href="https://sports-injury-indicator-alpha.vercel.app" target="_blank" class="btn-primary">
         Launch Live Demo
       </a>
       <a href="https://github.com/de1vos/sports-injury-indicator.git" target="_blank" class="btn-secondary">
